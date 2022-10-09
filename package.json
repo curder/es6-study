@@ -1,0 +1,15 @@
+{
+  "name": "es6-study",
+  "description": "ES6 学习",
+  "repository": "git@github.com:curder/es6-study.git",
+  "author": "curder <q.curder@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-alpha.19"
+  }
+}
