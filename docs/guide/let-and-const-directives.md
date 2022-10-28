@@ -1,4 +1,4 @@
-# 变量声明
+# let 和 const 指令
 
 ## let 关键字
 
@@ -10,8 +10,8 @@ ES6 中新增了 `let` 命令，用来声明变量。
 
 ```javascript
 {
-    let a = 1;
-    var b = 2;
+  let a = 1;
+  var b = 2;
 }
 
 console.log(a) // ReferenceError: a is not defined.
@@ -32,14 +32,14 @@ console.log(b) // 2
 
 ```javascript
 {
-    let a = 1;
-    let a = 2;
+  let a = 1;
+  let a = 2;
 }
 console.log(a) // SyntaxError: Identifier 'a' has already been declared
 
 {
-    var b = 1;
-    var b = 2;
+  var b = 1;
+  var b = 2;
 }
 console.log(b) // 2
 ```
@@ -48,15 +48,15 @@ console.log(b) // 2
 
 ```javascript
 for (var i = 0; i < 10; i++) { // 输出十个 10
-    setTimeout(function () {
-        console.log(i);
-    })
+  setTimeout(function() {
+    console.log(i);
+  })
 }
 
 for (let j = 0; j < 10; j++) { // 输出 0123456789
-    setTimeout(function () {
-        console.log(j);
-    })
+  setTimeout(function() {
+    console.log(j);
+  })
 }
 ```
 
@@ -94,8 +94,8 @@ var b = 2;
 var tmp = 1;
 
 if (true) {
-    tmp = 2; // ReferenceError
-    let tmp;
+  tmp = 2; // ReferenceError
+  let tmp;
 }
 ```
 
@@ -113,3 +113,61 @@ ES5 是很常见的，现在有了这种规定，避免此类错误就很容易�
 
 ## const 关键字
 
+`const` 声明一个只读变量，声明之后不允许改变。意味着，一旦声明必须初始化，否则会报错。
+
+```javascript
+const PI = 3.1415926;
+console.log(PI) // 3.1415926
+
+PI = 3.14; // TypeError: Assignment to constant variable.
+```
+
+上面代码表明改变常量的值会报错。
+
+`const` 声明的变量不得改变值，这意味着 `const` 一旦声明变量，就必须立即初始化，不能等之后再赋值。
+
+比如下面的 const 定义常量未赋值则抛出语法错误：
+
+```javascript
+const foo // Uncaught SyntaxError: Missing initializer in const declaration
+```
+
+### 不允许重复声明
+
+`const` 声明的常量，也与 `let` 一样不可对常量进行重复声明。
+
+```javascript
+var a = 1;
+let b = true;
+
+// 以下两行都会报错
+const a = 2; // Uncaught SyntaxError: Identifier 'a' has already been declared
+const b = false;
+```
+
+### 代码块内有效
+
+`const` 的作用域与 `let` 命令相同：只在声明所在的块级作用域内有效。
+
+比如下面的代码逻辑也会抛出错误：
+
+```javascript
+{
+  const PI = 3.1415926;
+}
+
+PI // Uncaught ReferenceError: PI is not defined
+```
+
+### 暂时性死区
+
+const命令声明的常量也是不提升，同样存在暂时性死区，只能在声明的位置后面使用。
+
+比如下面的代码逻辑也会抛出错误：
+
+```javascript
+{
+  console.log(PI) // Uncaught ReferenceError: Cannot access 'PI' before initialization   
+  const PI = 3.1415926;
+}
+```

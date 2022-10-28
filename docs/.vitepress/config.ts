@@ -27,7 +27,7 @@ export default defineConfig({
 
 function nav() {
     return [
-        {text: 'Guide', link: '/guide/variable-declaration', activeMatch: '/guide/'},
+        {text: 'Guide', link: '/guide/let-and-const-directives', activeMatch: '/guide/'},
     ];
 }
 
@@ -35,7 +35,7 @@ function sidebarGuide() {
     return [
         {
             items: [
-                {text: "变量声明", link: "/guide/variable-declaration"},
+                {text: "let 和 const 指令", link: "/guide/let-and-const-directives"},
             ]
         },
     ];
