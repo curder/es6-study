@@ -1,3 +1,3 @@
 # ES6 学习
 
-- [变量声明](guide/let-and-const-directives.md)
+- [let 和 const 指令](guide/let-and-const-directives.md)
