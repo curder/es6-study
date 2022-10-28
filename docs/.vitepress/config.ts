@@ -3,12 +3,12 @@ import {defineConfig} from 'vitepress'
 export default defineConfig({
     lang: "zh-CN",
     base: "/es6-study/",
-    title: "Python 学习",
-    description: "Python 学习记录",
+    title: "ES6 学习",
+    description: "ES6 学习记录",
     lastUpdated: true,
     themeConfig: {
         // logo: "",
-        siteTitle: "Python 学习",
+        siteTitle: "ES6 学习",
         outlineTitle: "章节导航",
         lastUpdatedText: "最后更新时间",
         editLink: {
