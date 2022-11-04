@@ -36,6 +36,7 @@ function sidebarGuide() {
         {
             items: [
                 {text: "let 和 const 指令", link: "/guide/let-and-const-directives"},
+                {text: "变量的解构赋值", link: "/guide/deconstruction-assignment"},
             ]
         },
     ];
