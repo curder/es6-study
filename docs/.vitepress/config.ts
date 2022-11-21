@@ -38,6 +38,7 @@ function sidebarGuide() {
                 {text: "let 和 const 指令", link: "/guide/let-and-const-directives"},
                 {text: "变量的解构赋值", link: "/guide/deconstruction-assignment"},
                 {text: "字符串扩展", link: "/guide/string"},
+                {text: "字符串方法", link: "/guide/string-methods"},
             ]
         },
     ];
