@@ -39,6 +39,7 @@ function sidebarGuide() {
                 {text: "变量的解构赋值", link: "/guide/deconstruction-assignment"},
                 {text: "字符串扩展", link: "/guide/string"},
                 {text: "字符串方法", link: "/guide/string-methods"},
+                {text: "for...of 循环", link: "/guide/for-of"},
             ]
         },
     ];
